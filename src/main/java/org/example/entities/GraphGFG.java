@@ -9,22 +9,23 @@ import java.util.*;
 // representation
 
 //link : https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/
-//link : https://www.youtube.com/watch?v=0u78hx-66Xk&list=PLqM7alHXFySEaZgcg7uRYJFBnYMLti-nh&index=2
+    //link : https://www.youtube.com/watch?v=0u78hx-66Xk&list=PLqM7alHXFySEaZgcg7uRYJFBnYMLti-nh&index=2
 // GFG - geeks for geeks
-public class GraphGFG {
-    public int V; // No. of vertices
-    public LinkedList<Integer> adj[]; //Adjacency Lists
+// G = ( V, E )
+public class GraphGFG { // G.
+    public int V; // V. //Quantity of nodes
+    public LinkedList<Integer> adj[]; // E. //Adjacency Lists (array of Linked List ) // aslinda bu Edge list olarak dusunulebilir
 
     // Constructor
     public GraphGFG(int v) {
-        V = v;
-        adj = new LinkedList[v];
+        V = v; // vertex amount of the graph
+        adj = new LinkedList[v]; // graph = array of linked list. burda node sayisi kadar linked list olusturuyor.
         for (int i = 0; i < v; ++i)
             adj[i] = new LinkedList();
     }
 
     // Function to add an edge into the graph
-    public void addEdge(int v, int w) {
+    public void addEdge(int v, int w) { // linked list add i yapiyor
         adj[v].add(w);
     }
 
